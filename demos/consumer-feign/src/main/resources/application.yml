@@ -7,13 +7,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        server-addr: ${REGISTER_HOST:120.79.233.86}:${REGISTER_PORT:8848}
     sentinel:
       transport:
-        dashboard: ${SENTINEL_DASHBOARD_HOST:localhost}:${SENTINEL_DASHBOARD_PORT:8021}
+        dashboard: ${SENTINEL_DASHBOARD_HOST:120.79.233.86}:${SENTINEL_DASHBOARD_PORT:8021}
 
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
+    host: ${RABBIT_MQ_HOST:120.79.233.86}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
@@ -22,6 +22,7 @@ spring:
     sender:
       type: rabbit
     enabled: true
+    base-url: http://120.79.233.86:9411/
   sleuth:
     sampler:
       probability: 1.0
